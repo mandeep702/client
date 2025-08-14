@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mandeep Mannu — Ultra Portfolio (50 Themes + FX)</title>
+  <meta name="description" content="Mandeep Mannu — Multi-theme portfolio with 50 styles, glowing UI, Matrix/Particles FX, contact links, projects, and interactive terminal." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--smooth:0.35s;--radius:12px}
+
+    /* ========================= THEMES (50) ========================= */
+    /* Hacker / Futuristic (25) */
+    html.hacker-green{--bg:#000;--panel:rgba(255,255,255,0.02);--text:#9affb6;--muted:#5be2ab;--accent:#00ff88;--glow:rgba(0,255,136,0.08)}
+    html.neon-purple{--bg:#070014;--panel:rgba(255,255,255,0.02);--text:#e7d7ff;--muted:#c6b3ff;--accent:#9b5cff;--glow:rgba(155,92,255,0.08)}
+    html.cyber-blue{--bg:#001117;--panel:rgba(255,255,255,0.02);--text:#bfefff;--muted:#79e6ff;--accent:#00d3ff;--glow:rgba(0,211,255,0.07)}
+    html.terminal-white{--bg:#020202;--panel:rgba(255,255,255,0.01);--text:#bfffbf;--muted:#8af08a;--accent:#3aff3a;--glow:rgba(58,255,58,0.07)}
+    html.glitch-pink{--bg:#070006;--panel:rgba(255,255,255,0.02);--text:#ffd9ff;--muted:#ff9df5;--accent:#ff2fb0;--glow:rgba(255,47,176,0.08)}
+    html.plasma-red{--bg:#100003;--panel:rgba(255,255,255,0.02);--text:#ffd6d6;--muted:#ff9a9a;--accent:#ff3366;--glow:rgba(255,51,102,0.08)}
+    html.dark-grid{--bg:#000;--panel:rgba(255,255,255,0.02);--text:#d6ffd6;--muted:#aaf2aa;--accent:#00ffa6;--glow:rgba(0,255,166,0.06)}
+    html.binary-rain{--bg:#000104;--panel:rgba(255,255,255,0.02);--text:#a6ffc6;--muted:#8ff0a9;--accent:#00ff9a;--glow:rgba(0,255,154,0.06)}
+    html.ai-glow{--bg:#020018;--panel:rgba(255,255,255,0.02);--text:#dfe6ff;--muted:#b7c5ff;--accent:#7a8cff;--glow:rgba(122,140,255,0.07)}
+    html.quantum-flux{--bg:#06000b;--panel:rgba(255,255,255,0.02);--text:#f0e6ff;--muted:#cabaff;--accent:#b13fff;--glow:rgba(177,63,255,0.06)}
+    html.neon-lime{--bg:#050b00;--panel:rgba(255,255,255,0.02);--text:#e6ffd6;--muted:#c6ff8a;--accent:#9cff00;--glow:rgba(156,255,0,0.08)}
+    html.neon-coral{--bg:#120104;--panel:rgba(255,255,255,0.02);--text:#ffe1dc;--muted:#ffb3a7;--accent:#ff5c5c;--glow:rgba(255,92,92,0.08)}
+    html.vaporwave{--bg:#11021d;--panel:rgba(255,255,255,0.02);--text:#ffe5ff;--muted:#a0f;--accent:#ff71ce;--glow:rgba(255,113,206,0.1)}
+    html.grid-teal{--bg:#001a1a;--panel:rgba(255,255,255,0.02);--text:#d6ffff;--muted:#8af0e6;--accent:#00ffd5;--glow:rgba(0,255,213,0.08)}
+    html.laser-yellow{--bg:#0b0b00;--panel:rgba(255,255,255,0.02);--text:#fffdd6;--muted:#fff38a;--accent:#ffe600;--glow:rgba(255,230,0,0.08)}
+    html.synthwave{--bg:#1a0023;--panel:rgba(255,255,255,0.02);--text:#ffd9ff;--muted:#ff9de6;--accent:#ff3a82;--glow:rgba(255,58,130,0.09)}
+    html.midnight-cyan{--bg:#000a12;--panel:rgba(255,255,255,0.02);--text:#e0faff;--muted:#a8e9ff;--accent:#00c2ff;--glow:rgba(0,194,255,0.08)}
+    html.ultra-violet{--bg:#0a001a;--panel:rgba(255,255,255,0.02);--text:#efe6ff;--muted:#cabaff;--accent:#8a2be2;--glow:rgba(138,43,226,0.09)}
+    html.retrowave-gold{--bg:#120800;--panel:rgba(255,255,255,0.02);--text:#ffeec0;--muted:#ffd27a;--accent:#ffb200;--glow:rgba(255,178,0,0.1)}
+    html.electric-indigo{--bg:#050014;--panel:rgba(255,255,255,0.02);--text:#efe6ff;--muted:#bfa3ff;--accent:#6c63ff;--glow:rgba(108,99,255,0.08)}
+    html.nano-pink{--bg:#19000a;--panel:rgba(255,255,255,0.02);--text:#ffd6e6;--muted:#ff9fc6;--accent:#ff4da6;--glow:rgba(255,77,166,0.09)}
+    html.circuit-green{--bg:#001406;--panel:rgba(255,255,255,0.02);--text:#e0ffe6;--muted:#a3ffbf;--accent:#23ff6b;--glow:rgba(35,255,107,0.08)}
+    html.plasma-blue{--bg:#00081a;--panel:rgba(255,255,255,0.02);--text:#d6f0ff;--muted:#9ed6ff;--accent:#4dc3ff;--glow:rgba(77,195,255,0.08)}
+    html.hex-magenta{--bg:#120015;--panel:rgba(255,255,255,0.02);--text:#ffd9ff;--muted:#ffb3ff;--accent:#ff3df5;--glow:rgba(255,61,245,0.09)}
+    html.nano-orange{--bg:#1a0700;--panel:rgba(255,255,255,0.02);--text:#ffe5d6;--muted:#ffc7a3;--accent:#ff7a1a;--glow:rgba(255,122,26,0.09)}
+
+    /* Creative / Premium (25) */
+    html.luxury-gold{--bg:#070607;--panel:rgba(255,255,255,0.03);--text:#f6e8c3;--muted:#b49d6a;--accent:#c9a84f;--glow:rgba(201,168,79,0.12)}
+    html.ocean-blue{--bg:#021024;--panel:rgba(255,255,255,0.02);--text:#dff6ff;--muted:#9bd6ff;--accent:#00bcd4;--glow:rgba(0,188,212,0.07)}
+    html.sunset-glow{--bg:#1a0b2b;--panel:rgba(255,255,255,0.02);--text:#ffeedd;--muted:#ffb78f;--accent:#ff6a88;--glow:rgba(255,106,136,0.07)}
+    html.minimal-white{--bg:#fbfbff;--panel:rgba(0,0,0,0.04);--text:#111827;--muted:#52525b;--accent:#111827;--glow:rgba(17,24,39,0.06)}
+    html.royal-purple{--bg:#0b0022;--panel:rgba(255,255,255,0.02);--text:#efe6ff;--muted:#d6c6ff;--accent:#7b3ff2;--glow:rgba(123,63,242,0.07)}
+    html.forest-green{--bg:#071009;--panel:rgba(255,255,255,0.02);--text:#e8f6ea;--muted:#a9d9b9;--accent:#2db67a;--glow:rgba(45,182,122,0.06)}
+    html.galaxy-stars{--bg:#05011a;--panel:rgba(255,255,255,0.02);--text:#e6f0ff;--muted:#b6c7ff;--accent:#7ad1ff;--glow:rgba(122,209,255,0.06)}
+    html.pastel-dream{--bg:#fff7fb;--panel:rgba(0,0,0,0.02);--text:#2b2b2b;--muted:#7b6f8a;--accent:#ff9fc1;--glow:rgba(255,159,193,0.06)}
+    html.crystal-glass{--bg:rgba(245,250,255,1);--panel:rgba(255,255,255,0.6);--text:#0b1220;--muted:#4b5563;--accent:#6fb6ff;--glow:rgba(111,182,255,0.06)}
+    html.aurora{--bg:#041014;--panel:rgba(255,255,255,0.02);--text:#eafff5;--muted:#aef0d6;--accent:#39ffb4;--glow:rgba(57,255,180,0.06)}
+    html.lava-orange{--bg:#1a0c00;--panel:rgba(255,255,255,0.03);--text:#ffe9d6;--muted:#ffc999;--accent:#ff7a00;--glow:rgba(255,122,0,0.12)}
+    html.mint-fresh{--bg:#f3fff9;--panel:rgba(0,0,0,0.04);--text:#0f172a;--muted:#475569;--accent:#0fcf86;--glow:rgba(15,207,134,0.08)}
+    html.steel-gray{--bg:#0f1115;--panel:rgba(255,255,255,0.02);--text:#e5e7eb;--muted:#9ca3af;--accent:#a3b3c2;--glow:rgba(163,179,194,0.08)}
+    html.candy-pop{--bg:#fff1f7;--panel:rgba(0,0,0,0.04);--text:#1f2937;--muted:#6b7280;--accent:#ff5aa5;--glow:rgba(255,90,165,0.1)}
+    html.desert-sand{--bg:#f9f5ea;--panel:rgba(0,0,0,0.04);--text:#2c2c2c;--muted:#786b5c;--accent:#d4a373;--glow:rgba(212,163,115,0.12)}
+    html.midnight-teal{--bg:#021418;--panel:rgba(255,255,255,0.02);--text:#d7f5ff;--muted:#9ddde7;--accent:#2bd4c5;--glow:rgba(43,212,197,0.08)}
+    html.ice-blue{--bg:#ecf7ff;--panel:rgba(0,0,0,0.04);--text:#0f172a;--muted:#334155;--accent:#3aa0ff;--glow:rgba(58,160,255,0.12)}
+    html.berry-red{--bg:#2a0010;--panel:rgba(255,255,255,0.02);--text:#ffe1ec;--muted:#ff9bbd;--accent:#ff2e6d;--glow:rgba(255,46,109,0.1)}
+    html.lime-soda{--bg:#f6ffec;--panel:rgba(0,0,0,0.04);--text:#111827;--muted:#4b5563;--accent:#7ad800;--glow:rgba(122,216,0,0.1)}
+    html.cocoa-brown{--bg:#1a0f0a;--panel:rgba(255,255,255,0.03);--text:#f2e7e0;--muted:#c6a48f;--accent:#b87333;--glow:rgba(184,115,51,0.12)}
+    html.coral{--bg:#fff1ec;--panel:rgba(0,0,0,0.04);--text:#111827;--muted:#6b7280;--accent:#ff7f6a;--glow:rgba(255,127,106,0.12)}
+    html.sunflower{--bg:#fffbe6;--panel:rgba(0,0,0,0.04);--text:#111827;--muted:#6b7280;--accent:#f5c000;--glow:rgba(245,192,0,0.12)}
+    html.emerald{--bg:#04130d;--panel:rgba(255,255,255,0.02);--text:#e6fff3;--muted:#b8f7db;--accent:#00d084;--glow:rgba(0,208,132,0.1)}
+    html.sapphire{--bg:#03102a;--panel:rgba(255,255,255,0.02);--text:#e6f0ff;--muted:#b6c7ff;--accent:#2879ff;--glow:rgba(40,121,255,0.1)}
+    html.ruby{--bg:#2a010a;--panel:rgba(255,255,255,0.02);--text:#ffe6ea;--muted:#ffb6c1;--accent:#e0115f;--glow:rgba(224,17,95,0.12)}
+    html.amethyst{--bg:#150024;--panel:rgba(255,255,255,0.02);--text:#f3e6ff;--muted:#d6b3ff;--accent:#9966ff;--glow:rgba(153,102,255,0.12)}
+
+    /* ========================= BASE STYLES ========================= */
+    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text);transition:background var(--smooth),color var(--smooth);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    .container{max-width:1100px;margin:120px auto 80px;padding:0 20px}
+
+    /* Background FX canvases */
+    #particlesCanvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+
+    /* Navbar */
+    nav{position:fixed;left:0;right:0;top:14px;display:flex;align-items:center;justify-content:space-between;padding:12px 22px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);backdrop-filter:blur(8px);border-radius:14px;margin:0 20px;z-index:999}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:var(--panel);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent);box-shadow:0 6px 20px var(--glow)}
+    .brand h1{font-size:16px;font-weight:700}
+    .brand p{font-size:12px;color:var(--muted);margin-top:2px}
+
+    .nav-links{display:flex;gap:8px;align-items:center}
+    .nav-item{padding:10px 14px;border-radius:10px;cursor:pointer;color:var(--text);transition:all var(--smooth);position:relative;font-weight:600}
+    .nav-item:hover{transform:translateY(-3px);text-shadow:0 0 10px var(--accent)}
+    .nav-item.active{transform:translateY(-4px);color:var(--accent);text-shadow:0 0 18px var(--accent),0 0 40px var(--accent);box-shadow:0 12px 40px var(--glow)}
+
+    /* Theme panel */
+    .theme-toggle{position:relative;margin-left:8px}
+    .toggle-main{width:48px;height:48px;border-radius:50%;border:none;background:var(--accent);cursor:pointer;display:grid;place-items:center;color:#fff;font-weight:700;box-shadow:0 10px 30px var(--glow);transition:transform var(--smooth), box-shadow var(--smooth)}
+    .toggle-main:hover{transform:scale(1.06);box-shadow:0 18px 40px var(--glow)}
+    .toggle-mini{margin-left:6px;padding:10px 12px;border-radius:10px;background:var(--panel);border:1px solid rgba(255,255,255,0.06);cursor:pointer;color:var(--text)}
+
+    .theme-panel{position:absolute;right:0;top:60px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;padding:14px;background:var(--panel);border-radius:12px;backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(0,0,0,0.35);width:640px;max-height:60vh;overflow:auto}
+    .theme-card{display:flex;flex-direction:column;align-items:center;gap:8px;padding:10px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);cursor:pointer}
+    .theme-circle{width:48px;height:48px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12)}
+    .theme-name{font-size:12px;color:var(--muted);text-align:center}
+    .theme-card.active{box-shadow:0 14px 40px var(--glow);transform:translateY(-6px)}
+
+    /* Hero */
+    .hero{position:relative;z-index:1;display:flex;gap:24px;align-items:center;justify-content:space-between;padding:22px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);box-shadow:0 10px 40px var(--glow)}
+    .hero-left{flex:1}
+    .headline{font-size:30px;line-height:1.02;font-weight:800;margin-bottom:10px}
+    .subline{font-size:16px;color:var(--muted);margin-bottom:12px}
+    .cta-row{display:flex;gap:12px;align-items:center}
+    .btn{padding:12px 18px;border-radius:12px;border:none;cursor:pointer;display:inline-flex;gap:10px;align-items:center;font-weight:700;transition:all var(--smooth);box-shadow:0 8px 28px var(--glow)}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+
+    .hero-right{width:300px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;text-align:center}
+    .avatar{width:120px;height:120px;border-radius:16px;margin:0 auto 12px;background:linear-gradient(135deg, rgba(255,255,255,0.03), transparent);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:34px;color:var(--accent);box-shadow:0 10px 30px var(--glow)}
+
+    /* Sections */
+    section{margin-top:34px}
+    .card{position:relative;z-index:1;padding:18px;border-radius:12px;background:var(--panel);box-shadow:0 8px 28px var(--glow)}
+
+    .about-grid{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
+    .skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+    .skill{padding:10px 12px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);font-weight:700;color:var(--text);position:relative;overflow:hidden}
+    .skill::after{content:'';position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--accent);box-shadow:0 0 12px var(--accent);transition:width 1.2s ease}
+    .skill.visible::after{width:100%}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);transition:transform var(--smooth);cursor:pointer;transform-style:preserve-3d}
+    .project:hover{transform:translateY(-8px) rotateX(2deg) rotateY(-2deg);box-shadow:0 18px 50px var(--glow)}
+
+    .contact-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .social{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;background:var(--panel);color:var(--text);text-decoration:none}
+    .social svg{width:18px;height:18px}
+
+    /* Terminal */
+    .terminal{background:#000;border-radius:10px;padding:12px;color:#0f0;font-family:monospace;min-height:110px}
+    .term-input{width:100%;background:transparent;border:none;color:inherit;outline:none}
+
+    footer{position:relative;z-index:1}
+
+    @media(max-width:900px){.about-grid{grid-template-columns:1fr}.hero{flex-direction:column}.hero-right{width:100%}nav{padding:10px 14px}.theme-panel{width:94vw;grid-template-columns:repeat(3,1fr)}}
+  </style>
+</head>
+<body>
+  <!-- Background FX -->
+  <canvas id="particlesCanvas"></canvas>
+
+  <nav>
+    <div class="brand">
+      <div class="logo">MM</div>
+      <div>
+        <h1>Mandeep Mannu</h1>
+        <p>Premium Web Developer</p>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <div class="nav-item nav-home active" data-target="home">Home</div>
+      <div class="nav-item nav-about" data-target="about">About</div>
+      <div class="nav-item nav-projects" data-target="projects">Projects</div>
+      <div class="nav-item nav-contact" data-target="contact">Contact</div>
+
+      <div class="theme-toggle" id="themeToggle">
+        <button class="toggle-main" id="toggleMain">Themes</button>
+        <button class="toggle-mini" id="btnRandom">Random</button>
+        <button class="toggle-mini" id="btnMatrix">Matrix</button>
+        <button class="toggle-mini" id="btnParticles">Particles</button>
+        <div class="theme-panel" id="themePanel" style="display:none">
+          <!-- 50 theme cards -->
+          <!-- Hacker/Futuristic (25) -->
+          <div class="theme-card" data-theme="hacker-green"><div class="theme-circle" style="background:linear-gradient(135deg,#002b00,#00ff88)"></div><div class="theme-name">Hacker Green</div></div>
+          <div class="theme-card" data-theme="neon-purple"><div class="theme-circle" style="background:linear-gradient(135deg,#2b003e,#9b5cff)"></div><div class="theme-name">Neon Purple</div></div>
+          <div class="theme-card" data-theme="cyber-blue"><div class="theme-circle" style="background:linear-gradient(135deg,#001b2b,#00d3ff)"></div><div class="theme-name">Cyber Blue</div></div>
+          <div class="theme-card" data-theme="terminal-white"><div class="theme-circle" style="background:linear-gradient(135deg,#002200,#66ff66)"></div><div class="theme-name">Terminal White</div></div>
+          <div class="theme-card" data-theme="glitch-pink"><div class="theme-circle" style="background:linear-gradient(135deg,#3a0026,#ff2fb0)"></div><div class="theme-name">Glitch Pink</div></div>
+          <div class="theme-card" data-theme="plasma-red"><div class="theme-circle" style="background:linear-gradient(135deg,#2b0006,#ff3366)"></div><div class="theme-name">Plasma Red</div></div>
+          <div class="theme-card" data-theme="dark-grid"><div class="theme-circle" style="background:linear-gradient(135deg,#001,#00ffa6)"></div><div class="theme-name">Dark Grid</div></div>
+          <div class="theme-card" data-theme="binary-rain"><div class="theme-circle" style="background:linear-gradient(135deg,#001,#00ff9a)"></div><div class="theme-name">Binary Rain</div></div>
+          <div class="theme-card" data-theme="ai-glow"><div class="theme-circle" style="background:linear-gradient(135deg,#00133a,#7a8cff)"></div><div class="theme-name">AI Glow</div></div>
+          <div class="theme-card" data-theme="quantum-flux"><div class="theme-circle" style="background:linear-gradient(135deg,#0b0022,#b13fff)"></div><div class="theme-name">Quantum Flux</div></div>
+          <div class="theme-card" data-theme="neon-lime"><div class="theme-circle" style="background:linear-gradient(135deg,#1a2b00,#9cff00)"></div><div class="theme-name">Neon Lime</div></div>
+          <div class="theme-card" data-theme="neon-coral"><div class="theme-circle" style="background:linear-gradient(135deg,#2b0008,#ff5c5c)"></div><div class="theme-name">Neon Coral</div></div>
+          <div class="theme-card" data-theme="vaporwave"><div class="theme-circle" style="background:linear-gradient(135deg,#1a0040,#ff71ce)"></div><div class="theme-name">Vaporwave</div></div>
+          <div class="theme-card" data-theme="grid-teal"><div class="theme-circle" style="background:linear-gradient(135deg,#001a1a,#00ffd5)"></div><div class="theme-name">Grid Teal</div></div>
+          <div class="theme-card" data-theme="laser-yellow"><div class="theme-circle" style="background:linear-gradient(135deg,#1a1a00,#ffe600)"></div><div class="theme-name">Laser Yellow</div></div>
+          <div class="theme-card" data-theme="synthwave"><div class="theme-circle" style="background:linear-gradient(135deg,#2b0045,#ff3a82)"></div><div class="theme-name">Synthwave</div></div>
+          <div class="theme-card" data-theme="midnight-cyan"><div class="theme-circle" style="background:linear-gradient(135deg,#001422,#00c2ff)"></div><div class="theme-name">Midnight Cyan</div></div>
+          <div class="theme-card" data-theme="ultra-violet"><div class="theme-circle" style="background:linear-gradient(135deg,#150033,#8a2be2)"></div><div class="theme-name">Ultra Violet</div></div>
+          <div class="theme-card" data-theme="retrowave-gold"><div class="theme-circle" style="background:linear-gradient(135deg,#261400,#ffb200)"></div><div class="theme-name">Retrowave Gold</div></div>
+          <div class="theme-card" data-theme="electric-indigo"><div class="theme-circle" style="background:linear-gradient(135deg,#0a0033,#6c63ff)"></div><div class="theme-name">Electric Indigo</div></div>
+          <div class="theme-card" data-theme="nano-pink"><div class="theme-circle" style="background:linear-gradient(135deg,#330018,#ff4da6)"></div><div class="theme-name">Nano Pink</div></div>
+          <div class="theme-card" data-theme="circuit-green"><div class="theme-circle" style="background:linear-gradient(135deg,#002b11,#23ff6b)"></div><div class="theme-name">Circuit Green</div></div>
+          <div class="theme-card" data-theme="plasma-blue"><div class="theme-circle" style="background:linear-gradient(135deg,#001133,#4dc3ff)"></div><div class="theme-name">Plasma Blue</div></div>
+          <div class="theme-card" data-theme="hex-magenta"><div class="theme-circle" style="background:linear-gradient(135deg,#270033,#ff3df5)"></div><div class="theme-name">Hex Magenta</div></div>
+          <div class="theme-card" data-theme="nano-orange"><div class="theme-circle" style="background:linear-gradient(135deg,#2b0e00,#ff7a1a)"></div><div class="theme-name">Nano Orange</div></div>
+
+          <!-- Creative/Premium (25) -->
+          <div class="theme-card" data-theme="luxury-gold"><div class="theme-circle" style="background:linear-gradient(135deg,#c9a84f,#ffd700)"></div><div class="theme-name">Luxury Gold</div></div>
+          <div class="theme-card" data-theme="ocean-blue"><div class="theme-circle" style="background:linear-gradient(135deg,#013447,#00bcd4)"></div><div class="theme-name">Ocean Blue</div></div>
+          <div class="theme-card" data-theme="sunset-glow"><div class="theme-circle" style="background:linear-gradient(135deg,#5b115b,#ff6a88)"></div><div class="theme-name">Sunset Glow</div></div>
+          <div class="theme-card" data-theme="minimal-white"><div class="theme-circle" style="background:linear-gradient(135deg,#ffffff,#f0f0f0)"></div><div class="theme-name">Minimal White</div></div>
+          <div class="theme-card" data-theme="royal-purple"><div class="theme-circle" style="background:linear-gradient(135deg,#2b003e,#7b3ff2)"></div><div class="theme-name">Royal Purple</div></div>
+          <div class="theme-card" data-theme="forest-green"><div class="theme-circle" style="background:linear-gradient(135deg,#00220b,#2db67a)"></div><div class="theme-name">Forest Green</div></div>
+          <div class="theme-card" data-theme="galaxy-stars"><div class="theme-circle" style="background:linear-gradient(135deg,#04103a,#7ad1ff)"></div><div class="theme-name">Galaxy Stars</div></div>
+          <div class="theme-card" data-theme="pastel-dream"><div class="theme-circle" style="background:linear-gradient(135deg,#ffd9f0,#9ef0ff)"></div><div class="theme-name">Pastel Dream</div></div>
+          <div class="theme-card" data-theme="crystal-glass"><div class="theme-circle" style="background:linear-gradient(135deg,#dff4ff,#9fd6ff)"></div><div class="theme-name">Crystal Glass</div></div>
+          <div class="theme-card" data-theme="aurora"><div class="theme-circle" style="background:linear-gradient(135deg,#012b28,#39ffb4)"></div><div class="theme-name">Aurora</div></div>
+          <div class="theme-card" data-theme="lava-orange"><div class="theme-circle" style="background:linear-gradient(135deg,#7a2d00,#ff7a00)"></div><div class="theme-name">Lava Orange</div></div>
+          <div class="theme-card" data-theme="mint-fresh"><div class="theme-circle" style="background:linear-gradient(135deg,#ccffe9,#0fcf86)"></div><div class="theme-name">Mint Fresh</div></div>
+          <div class="theme-card" data-theme="steel-gray"><div class="theme-circle" style="background:linear-gradient(135deg,#222831,#a3b3c2)"></div><div class="theme-name">Steel Gray</div></div>
+          <div class="theme-card" data-theme="candy-pop"><div class="theme-circle" style="background:linear-gradient(135deg,#ffd1e6,#ff5aa5)"></div><div class="theme-name">Candy Pop</div></div>
+          <div class="theme-card" data-theme="desert-sand"><div class="theme-circle" style="background:linear-gradient(135deg,#f5e3c8,#d4a373)"></div><div class="theme-name">Desert Sand</div></div>
+          <div class="theme-card" data-theme="midnight-teal"><div class="theme-circle" style="background:linear-gradient(135deg,#05363f,#2bd4c5)"></div><div class="theme-name">Midnight Teal</div></div>
+          <div class="theme-card" data-theme="ice-blue"><div class="theme-circle" style="background:linear-gradient(135deg,#d7ecff,#3aa0ff)"></div><div class="theme-name">Ice Blue</div></div>
+          <div class="theme-card" data-theme="berry-red"><div class="theme-circle" style="background:linear-gradient(135deg,#80002a,#ff2e6d)"></div><div class="theme-name">Berry Red</div></div>
+          <div class="theme-card" data-theme="lime-soda"><div class="theme-circle" style="background:linear-gradient(135deg,#e7ffad,#7ad800)"></div><div class="theme-name">Lime Soda</div></div>
+          <div class="theme-card" data-theme="cocoa-brown"><div class="theme-circle" style="background:linear-gradient(135deg,#4d2c1a,#b87333)"></div><div class="theme-name">Cocoa Brown</div></div>
+          <div class="theme-card" data-theme="coral"><div class="theme-circle" style="background:linear-gradient(135deg,#ffd5cb,#ff7f6a)"></div><div class="theme-name">Coral</div></div>
+          <div class="theme-card" data-theme="sunflower"><div class="theme-circle" style="background:linear-gradient(135deg,#fff1a8,#f5c000)"></div><div class="theme-name">Sunflower</div></div>
+          <div class="theme-card" data-theme="emerald"><div class="theme-circle" style="background:linear-gradient(135deg,#0c3327,#00d084)"></div><div class="theme-name">Emerald</div></div>
+          <div class="theme-card" data-theme="sapphire"><div class="theme-circle" style="background:linear-gradient(135deg,#0b2a66,#2879ff)"></div><div class="theme-name">Sapphire</div></div>
+          <div class="theme-card" data-theme="ruby"><div class="theme-circle" style="background:linear-gradient(135deg,#6a0b1f,#e0115f)"></div><div class="theme-name">Ruby</div></div>
+          <div class="theme-card" data-theme="amethyst"><div class="theme-circle" style="background:linear-gradient(135deg,#3f0066,#9966ff)"></div><div class="theme-name">Amethyst</div></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="home" class="hero card">
+      <div class="hero-left">
+        <div class="headline">Hello — I’m <span style="color:var(--accent)">Mandeep Mannu</span>, I craft <strong>stylish, high-converting websites</strong> that make brands look premium.</div>
+        <div class="subline"><span id="typing">Fast delivery • Clean code • Visual polish • WhatsApp-first onboarding</span></div>
+        <div style="margin-top:12px;color:var(--muted)">I design websites that look expensive — but fit your budget. Let’s make your online presence unforgettable.</div>
+
+        <div class="cta-row" style="margin-top:18px">
+          <a class="btn btn-primary" id="hireBtn" href="https://wa.me/917696624393?text=Hi%20Mandeep%2C%20I%27d%20like%20to%20hire%20you%20for%20a%20website%20project." target="_blank">📲 Hire me on WhatsApp</a>
+          <a class="btn btn-outline" href="mailto:mandeepmannu1964@gmail.com">✉️ mandeepmannu1964@gmail.com</a>
+          <a class="btn btn-outline" id="downloadCV" href="#">⬇️ Download CV</a>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <a class="social" href="https://wa.me/917696624393" target="_blank" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.05a9 9 0 10-2.62 6.12L21 21l-1.83-5.36A8.96 8.96 0 0021 12.05z" fill="currentColor"/></svg>
+            WhatsApp
+          </a>
+          <a class="social" href="https://instagram.com/mannu_____.x" target="_blank" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            @mannu_____.x
+          </a>
+          <a class="social" href="mailto:mandeepmannu1964@gmail.com" title="Email">✉️ Email</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="avatar">MM</div>
+        <div style="font-weight:800">Mandeep Mannu</div>
+        <div class="small">Student & Web Developer • HTML • CSS • JS • Python • C++</div>
+        <div style="margin-top:12px;text-align:left">
+          <div class="small">Profile Highlights</div>
+          <ul style="margin-top:8px;text-align:left;color:var(--muted);line-height:1.6">
+            <li>Premium single-page & multi-page sites</li>
+            <li>Interactive UI, animations & effects</li>
+            <li>WhatsApp-first client onboarding</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="about-grid">
+        <div class="card">
+          <h2>About Me</h2>
+          <p>Hello! I’m <strong>Mandeep Mannu</strong>. I design and build attractive, conversion-focused websites that help clients get noticed and get customers. I combine clean code with eye-catching design and smart UX to deliver fast, modern websites.</p>
+
+          <p style="margin-top:8px;color:var(--muted)"><em>Why work with me?</em></p>
+          <ul style="margin-top:8px;color:var(--muted);line-height:1.6">
+            <li>Premium visuals that build trust</li>
+            <li>Focus on responsiveness and performance</li>
+            <li>Smooth WhatsApp-based onboarding (fast replies)</li>
+          </ul>
+
+          <div style="margin-top:12px">
+            <div class="small">Top Skills</div>
+            <div class="skills" id="skills" style="margin-top:8px">
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">JavaScript</div>
+              <div class="skill">Responsive Design</div>
+              <div class="skill">Animations</div>
+              <div class="skill">Python</div>
+              <div class="skill">C++</div>
+              <div class="skill">UI/UX</div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="https://wa.me/917696624393?text=Hi%20Mandeep%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank">Hire me on WhatsApp</a>
+            <a class="btn btn-outline" href="mailto:mandeepmannu1964@gmail.com">Email me</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom:10px">Quick Pitch</h3>
+          <p style="color:var(--muted);line-height:1.6">I create modern websites that look expensive — but fit your budget. Clients choose me for fast delivery, elegant UI, and smooth onboarding via WhatsApp. Let’s build something that sells.</p>
+
+          <div style="margin-top:12px">
+            <h4 style="margin-bottom:8px">Services</h4>
+            <ul style="color:var(--muted);line-height:1.6">
+              <li>Full website design & build</li>
+              <li>Landing pages for conversions</li>
+              <li>E-commerce & product pages</li>
+              <li>Website optimization & animations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="card">
+        <h2>Selected Projects</h2>
+        <div class="projects-grid" style="margin-top:12px">
+          <div class="project" data-title="ShopiZone — E-commerce" data-desc="Large e-commerce layout with search, categories, offers, and product listings." onclick="openProjectModal(this)">
+            <h4>ShopiZone — E-commerce</h4>
+            <p style="color:var(--muted)">A premium store layout focused on conversions and UX.</p>
+          </div>
+          <div class="project" data-title="Premium Calculator" data-desc="Scientific calculator web app with BODMAS, trig funcs and sleek UI." onclick="openProjectModal(this)">
+            <h4>Premium Calculator</h4>
+            <p style="color:var(--muted)">Scientific, responsive calculator with polished UI.</p>
+          </div>
+          <div class="project" data-title="2D Survival Game UI" data-desc="Top-down shooter UI mockup with HUD, inventory and responsive controls." onclick="openProjectModal(this)">
+            <h4>2D Survival Game UI</h4>
+            <p style="color:var(--muted)">Game interface, menus and HUD mockups.</p>
+          </div>
+          <div class="project" data-title="Portfolio Template" data-desc="Multipage portfolio template with animations and branding." onclick="openProjectModal(this)">
+            <h4>Portfolio Template</h4>
+            <p style="color:var(--muted)">A template to showcase agencies and freelancers.</p>
+          </div>
+          <div class="project" data-title="Landing Page — Startup" data-desc="Conversion-focused landing page with hero, features and CTA." onclick="openProjectModal(this)">
+            <h4>Landing Page — Startup</h4>
+            <p style="color:var(--muted)">High-converting landing layout.</p>
+          </div>
+          <div class="project" data-title="Service Booking" data-desc="Booking flow UI for service businesses with calendar and payment mockups." onclick="openProjectModal(this)">
+            <h4>Service Booking</h4>
+            <p style="color:var(--muted)">Booking UI with calendar and payment steps.</p>
+          </div>
+          <div class="project" data-title="Agency Site" data-desc="Large agency homepage with case studies and contact flow." onclick="openProjectModal(this)">
+            <h4>Agency Site</h4>
+            <p style="color:var(--muted)">A polished agency homepage mockup.</p>
+          </div>
+          <div class="project" data-title="Product Showcase" data-desc="Product detail and gallery focused on conversions." onclick="openProjectModal(this)">
+            <h4>Product Showcase</h4>
+            <p style="color:var(--muted)">Beautiful product pages and galleries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card">
+        <h2>Contact</h2>
+        <div class="contact-row" style="margin-top:12px">
+          <a class="social" href="https://wa.me/917696624393" target="_blank" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.05a9 9 0 10-2.62 6.12L21 21l-1.83-5.36A8.96 8.96 0 0021 12.05z" fill="currentColor"/></svg>
+            +91 7696624393 (WhatsApp)
+          </a>
+
+          <a class="social" href="https://instagram.com/mannu_____.x" target="_blank" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            @mannu_____.x
+          </a>
+
+          <a class="social" href="mailto:mandeepmannu1964@gmail.com" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5v9A2.5 2.5 0 005.5 19h13A2.5 2.5 0 0021 16.5v-9A2.5 2.5 0 0018.5 5h-13A2.5 2.5 0 003 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M21 7l-9 6-9-6" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+            mandeepmannu1964@gmail.com
+          </a>
+        </div>
+
+        <div style="margin-top:18px">
+          <h4>Interactive Terminal (Try it)</h4>
+          <div class="terminal" id="terminal">
+            <div id="termOut">Welcome — type <strong>help</strong> and press Enter.</div>
+            <div style="margin-top:8px"><input class="term-input" id="termInput" placeholder="type command..." autocomplete="off" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="margin-top:28px;text-align:center;color:var(--muted)">👀 Visitors: <span id="visits">0</span> • Portfolio by Mandeep Mannu • 50 Themes + FX</footer>
+  </div>
+
+  <!-- Project Modal -->
+  <div id="projModal" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px;z-index:2000">
+    <div style="max-width:720px;width:100%;background:var(--panel);padding:18px;border-radius:12px;box-shadow:0 20px 60px var(--glow);">
+      <button id="closeProj" style="float:right;background:transparent;border:none;color:var(--text);font-weight:700;cursor:pointer">✖</button>
+      <h3 id="projTitle"></h3>
+      <p id="projDesc" style="color:var(--muted)"></p>
+    </div>
+  </div>
+
+  <script>
+    const $ = s => document.querySelector(s);
+    const $$ = s => document.querySelectorAll(s);
+
+    /* ========================= THEME INIT ========================= */
+    const allThemes = [
+      'hacker-green','neon-purple','cyber-blue','terminal-white','glitch-pink','plasma-red','dark-grid','binary-rain','ai-glow','quantum-flux','neon-lime','neon-coral','vaporwave','grid-teal','laser-yellow','synthwave','midnight-cyan','ultra-violet','retrowave-gold','electric-indigo','nano-pink','circuit-green','plasma-blue','hex-magenta','nano-orange',
+      'luxury-gold','ocean-blue','sunset-glow','minimal-white','royal-purple','forest-green','galaxy-stars','pastel-dream','crystal-glass','aurora','lava-orange','mint-fresh','steel-gray','candy-pop','desert-sand','midnight-teal','ice-blue','berry-red','lime-soda','cocoa-brown','coral','sunflower','emerald','sapphire','ruby','amethyst'
+    ];
+
+    const saved = localStorage.getItem('mm_theme') || 'luxury-gold';
+    document.documentElement.className = saved;
+
+    function refreshThemeActive(){
+      $$('.theme-card').forEach(c => c.classList.toggle('active', c.dataset.theme === document.documentElement.className));
+    }
+    refreshThemeActive();
+
+    /* ========================= THEME PANEL ========================= */
+    const toggleMain = $('#toggleMain');
+    const themePanel = $('#themePanel');
+    toggleMain.addEventListener('click', () => { themePanel.style.display = themePanel.style.display === 'grid' ? 'none' : 'grid'; });
+
+    $$('.theme-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const t = card.dataset.theme;
+        setTheme(t);
+        themePanel.style.display = 'none';
+        card.animate([{transform:'scale(1.03)'},{transform:'scale(1)'}],{duration:250});
+      });
+    });
+
+    function setTheme(t){
+      document.documentElement.className = t;
+      localStorage.setItem('mm_theme', t);
+      refreshThemeActive();
+    }
+
+    // Random theme
+    $('#btnRandom').addEventListener('click', () => setTheme(allThemes[Math.floor(Math.random()*allThemes.length)]));
+
+    /* ========================= NAV & SCROLL ========================= */
+    $$('.nav-item').forEach(it => {
+      it.addEventListener('click', () => {
+        $$('.nav-item').forEach(n => n.classList.remove('active'));
+        it.classList.add('active');
+        const target = it.dataset.target; const el = document.getElementById(target);
+        if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 90, behavior:'smooth'});
+      });
+    });
+
+    // Skill bars fill on view
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); })
+    },{threshold:0.3});
+    $$('#skills .skill').forEach(s=>io.observe(s));
+
+    /* ========================= PROJECTS MODAL ========================= */
+    function openProjectModal(el){
+      $('#projTitle').textContent = el.dataset.title;
+      $('#projDesc').textContent = el.dataset.desc;
+      $('#projModal').style.display = 'flex';
+    }
+    window.openProjectModal = openProjectModal;
+    $('#closeProj').addEventListener('click', () => $('#projModal').style.display = 'none');
+
+    /* ========================= TERMINAL ========================= */
+    const termOut = $('#termOut');
+    const termInput = $('#termInput');
+    const commands = {
+      help: 'commands: <strong>about</strong>, <strong>projects</strong>, <strong>contact</strong>, <strong>themes</strong>, <strong>matrix</strong>, <strong>particles</strong>, <strong>random</strong>',
+      about: 'I am Mandeep — I build premium websites for businesses and freelancers.',
+      projects: 'Open Projects section to view samples. Use mouse or nav.',
+      contact: 'WhatsApp: +91 7696624393 • Email: mandeepmannu1964@gmail.com',
+      themes: 'Open the Themes panel (top-right) to switch looks.',
+      matrix: 'Toggling Matrix background... (type again to toggle) ',
+      particles: 'Toggling Particle trail... (type again to toggle) ',
+      random: 'Random theme applied.'
+    };
+
+    termInput.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter'){
+        const v = termInput.value.trim().toLowerCase();
+        if(!v) return; termInput.value = '';
+        termOut.innerHTML += `<div>$ ${v}</div>`;
+        if(v in commands){
+          termOut.innerHTML += `<div>${commands[v]}</div>`;
+          if(v==='matrix') toggleMatrix();
+          if(v==='particles') toggleParticles();
+          if(v==='random') $('#btnRandom').click();
+        } else {
+          termOut.innerHTML += `<div>Unknown command: ${v}</div>`;
+        }
+        termOut.scrollTop = termOut.scrollHeight;
+      }
+    });
+
+    /* ========================= BACKGROUND FX ========================= */
+    // Particle cursor
+    const pCanvas = $('#particlesCanvas');
+    const pCtx = pCanvas.getContext('2d');
+    let particlesOn = false; pCanvas.width = innerWidth; pCanvas.height = innerHeight;
+    window.addEventListener('resize', ()=>{pCanvas.width=innerWidth;pCanvas.height=innerHeight});
+    const parts = [];
+    function addParticle(x,y){
+      parts.push({x,y,dx:(Math.random()-0.5)*1.5,dy:(Math.random()-0.5)*1.5,life:60});
+    }
+    function particlesLoop(){
+      if(!particlesOn) return;
+      pCtx.clearRect(0,0,pCanvas.width,pCanvas.height);
+      const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent');
+      parts.forEach((p,i)=>{
+        p.x+=p.dx; p.y+=p.dy; p.life--; if(p.life<=0) parts.splice(i,1);
+        pCtx.beginPath(); pCtx.arc(p.x,p.y,2,0,Math.PI*2); pCtx.fillStyle = accent; pCtx.fill();
+      });
+      requestAnimationFrame(particlesLoop);
+    }
+    function toggleParticles(){
+      particlesOn = !particlesOn; pCanvas.style.display = particlesOn ? 'block' : 'none';
+      if(particlesOn) particlesLoop();
+    }
+    document.addEventListener('mousemove', e => { if(particlesOn){ for(let i=0;i<3;i++) addParticle(e.clientX,e.clientY);} });
+    $('#btnParticles').addEventListener('click', toggleParticles);
+
+    /* ========================= TYPING TEXT ========================= */
+    const lines = [
+      'Fast delivery • Clean code • Visual polish • WhatsApp-first onboarding',
+      'Responsive design • Animations • SEO-friendly • Performance tuned',
+      'Hacker-stylish UI • 50 dynamic themes • Client-first approach'
+    ];
+    let l=0; function typeNext(){ $('#typing').textContent = lines[l%lines.length]; l++; }
+    setInterval(typeNext, 2600);
+
+    /* ========================= CV DOWNLOAD (simple) ========================= */
+    $('#downloadCV').addEventListener('click', (e)=>{
+      e.preventDefault();
+      const blob = new Blob([`Name: Mandeep Mannu
+Role: Web Developer
+Email: mandeepmannu1964@gmail.com
+WhatsApp: +91 7696624393
+Skills: HTML, CSS, JS, Python, C++
+Portfolio: 50 themes + effects
+`], {type:'text/plain'});
+      const url = URL.createObjectURL(blob); const a = document.createElement('a');
+      a.href = url; a.download = 'Mandeep_Mannu_CV.txt'; a.click(); URL.revokeObjectURL(url);
+    });
+
+    /* ========================= VISITOR COUNTER (local fake) ========================= */
+    const visits = Number(localStorage.getItem('mm_visits')||'0') + Math.floor(Math.random()*3+1);
+    localStorage.setItem('mm_visits', String(visits));
+    $('#visits').textContent = visits;
+  </script>
+</body>
+</html>
